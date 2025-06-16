@@ -69,7 +69,6 @@ setup(
         'requests',
         'python-dateutil',
         'httpcache',
-        'reppy',
     ],
     license=open('LICENSE').read(),
     zip_safe=False,
