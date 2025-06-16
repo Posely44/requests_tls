@@ -63,7 +63,7 @@ setup(
     url='https://github.com/Posely44/requests_tls/',
     packages=find_packages(exclude=('test*', )),
     include_package_data=True,
-    package_data={'': ['./requests.png']},
+    package_data={'requests_tls': ['requests.png']},
     package_dir={'requests_tls': 'requests_tls'},
     install_requires=[
         'six',
