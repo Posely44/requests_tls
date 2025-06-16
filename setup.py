@@ -65,7 +65,6 @@ setup(
     include_package_data=True,
     package_data={'': ['./requests.png']},
     package_dir={'requests_tls': 'requests_tls'},
-    include_package_data=True,
     install_requires=[
         'six',
         'requests',
