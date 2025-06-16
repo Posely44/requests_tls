@@ -4,6 +4,7 @@ from requests import Response
 from requests.adapters import HTTPAdapter
 from requests.packages.urllib3.response import HTTPResponse
 from requests.packages.urllib3.poolmanager import PoolManager
+import os
 
 
 class MiddlewareHTTPAdapter(HTTPAdapter):

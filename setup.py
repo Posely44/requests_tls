@@ -62,6 +62,8 @@ setup(
     author='Posely44',
     url='https://github.com/Posely44/requests_tls/',
     packages=find_packages(exclude=('test*', )),
+    include_package_data=True,
+    package_data={'': ['./requests.png']},
     package_dir={'requests_tls': 'requests_tls'},
     include_package_data=True,
     install_requires=[
