@@ -52,19 +52,17 @@ def find_version(fname):
         raise RuntimeError('Cannot find version information')
     return version
 
-__version__ = find_version('requests_middleware/__init__.py')
+__version__ = find_version('requests_tls/__init__.py')
 
 
 setup(
-    name='requests-middleware',
+    name='requests-tls',
     version=__version__,
-    description='Composable HTTP middleware for requests',
-    long_description=open('README.rst').read(),
-    author='Joshua Carp',
-    author_email='jm.carp@gmail.com',
-    url='https://github.com/jmcarp/requests-middleware',
+    description='Composable HTTP TLS for requests',
+    author='Posely44',
+    url='https://github.com/Posely44/requests_tls/',
     packages=find_packages(exclude=('test*', )),
-    package_dir={'requests_middleware': 'requests_middleware'},
+    package_dir={'requests_tls': 'requests_tls'},
     include_package_data=True,
     install_requires=[
         'six',
